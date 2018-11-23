@@ -1,0 +1,33 @@
+server:
+  port: 7070
+  tomcat:
+    max-threads: 5
+
+
+
+
+#management.endpoint.info.enabled: true
+#management.endpoint.metrics.enabled: true
+#management.endpoint.sensitive: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, health, metrics, beans, server
+
+
+
+
+turbine:
+  aggregator:
+    clusterConfig: SAMPLE-HYSTRIX-AGGREGATE
+  appConfig: SAMPLE-HYSTRIX-AGGREGATE
+usa:
+  states:
+    -
+     name: California
+     train: http://api.bart.gov/api/route.aspx?cmd=routes&key=MW9S-E7SL-26DU-VV8V&json=y
+    -
+     name: Oregon
+     train: http://api.bart.gov/api/route.aspx?cmd=routes&key=MW9S-E7SL-26DU-VV8V&json=y
