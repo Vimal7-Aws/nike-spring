@@ -3,17 +3,18 @@ pipeline {
     stages {
         stage('Check Out') {
             steps {
-                echo "Check Out"
+                echo 'Check Out'
             }
         }
         stage('Gradle Run') {
             steps {
-                echo "Gradle Run"
+                echo 'Gradle Run'
             }
         }
+
         stage('Docker Build') {
             steps {
-                echo "Docker Build"
+                echo 'Docker Build'
             }
         }
     }
